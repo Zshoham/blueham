@@ -16,10 +16,15 @@ modules:
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
 
+  - type: script
+    scripts:
+      - install-brave.sh
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
       - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-40/varlad-zellij-fedora-40.repo
+    optfix:
+      - brave.com
     install:
       - kitty
       - fish
@@ -40,6 +45,7 @@ modules:
       - jetbrains-mono-fonts
       - zathura
       - mpv
+      - brave-browser
     remove:
       - firefox
       - firefox-langpacks
