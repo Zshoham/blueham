@@ -19,7 +19,7 @@ modules:
   - type: script
     scripts:
       - install-atuin.sh
-  - type: rpm-ostree
+  - type: rpm-opt-patch
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
       - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-40/varlad-zellij-fedora-40.repo
