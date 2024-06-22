@@ -82,6 +82,10 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
+  - type: systemd
+    system:
+      enabled: 
+        - optfix.service
   - type: fonts
     fonts:
       nerd-fonts:
