@@ -30,6 +30,12 @@ modules:
       - brave.com
     install:
       - kitty
+      - rust
+      - cargo
+      - rustfmt
+      - rust-analyzer
+      - clippy
+      - rust-src
       - fish
       - bat
       - fd-find
