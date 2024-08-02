@@ -1,0 +1,87 @@
+# image will be published to ghcr.io/<user>/<name>
+name: blueham-hyprland
+# description will be included in the image's metadata
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/wayblueorg/hyprland
+image-version: 40 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - usr: /usr # copies config/files/usr into your image's /usr.
+                  # put configuration files you want in /etc/ on a booted system 
+                  # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: script
+    scripts:
+      - install-atuin.sh
+  - type: rpm-opt-patch
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
+      - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-40/varlad-zellij-fedora-40.repo
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    keys:
+      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    optfix:
+      - brave.com
+    install:
+      - kitty
+      - rust
+      - cargo
+      - rustfmt
+      - rust-analyzer
+      - clippy
+      - rust-src
+      - fish
+      - bat
+      - fd-find
+      - jq
+      - yq
+      - zoxide
+      - ripgrep
+      - starship
+      - zellij
+      - lsd
+      - age
+      - git-delta
+      - btop
+      - neovim
+      - fzf
+      - jetbrains-mono-fonts
+      - zathura
+      - mpv
+      - brave-browser
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        # - org.gnome.Loupe
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove:
+      # - org.gnome.eog
+  - type: systemd
+    system:
+      enabled: 
+        - optfix.service
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - NerdFontsSymbolsOnly
+  - type: chezmoi
+    repository: "https://github.com/Zshoham/dotfiles.git" 
+    disable-init: true
+    disable-update: true
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
