@@ -10,52 +10,13 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - from-file: base-packages.yml
+
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
-
-  - type: script
-    scripts:
-      - install-atuin.sh
-  - type: rpm-opt-patch
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
-      - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-40/varlad-zellij-fedora-40.repo
-      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-    keys:
-      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-    optfix:
-      - brave.com
-    install:
-      - kitty
-      - rust
-      - cargo
-      - rustfmt
-      - rust-analyzer
-      - clippy
-      - rust-src
-      - fish
-      - bat
-      - fd-find
-      - jq
-      - yq
-      - zoxide
-      - ripgrep
-      - starship
-      - zellij
-      - lsd
-      - age
-      - git-delta
-      - btop
-      - neovim
-      - fzf
-      - jetbrains-mono-fonts
-      - zathura
-      - mpv
-      - brave-browser
-
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
