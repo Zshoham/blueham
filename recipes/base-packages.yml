@@ -2,6 +2,7 @@ modules:
   - type: script
     scripts:
       - install-atuin.sh
+      - install-yazi.sh
 
   - type: rpm-opt-patch
     repos:
