@@ -3,6 +3,7 @@ modules:
     scripts:
       - install-atuin.sh
       - install-yazi.sh
+      - install-rust.sh
 
   - type: rpm-opt-patch
     repos:
@@ -15,12 +16,6 @@ modules:
       - brave.com
     install:
       - kitty
-      - rust
-      - cargo
-      - rustfmt
-      - rust-analyzer
-      - clippy
-      - rust-src
       - fish
       - bat
       - fd-find
