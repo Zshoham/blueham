@@ -13,8 +13,16 @@ modules:
   - from-file: base-packages.yml
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-40/solopasha-hyprland-fedora-40.repo
     install:
       - hyprlock
+      - hypridle
+      - hyprcursor
+      - hyprpaper
+      - aylurs-gtk-shell
+    remove:
+      - swaylock
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
