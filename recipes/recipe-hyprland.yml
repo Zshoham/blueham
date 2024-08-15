@@ -23,6 +23,7 @@ modules:
       - hyprcursor
       - hyprpaper
       - aylurs-gtk-shell
+      - qt6-qtsvg
     remove:
       - swaylock
   - type: files
