@@ -15,6 +15,7 @@ modules:
     optfix:
       - brave.com
     install:
+      - polkit-kde
       - kitty
       - fish
       - bat
