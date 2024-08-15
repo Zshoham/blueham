@@ -5,7 +5,7 @@ modules:
       - install-yazi.sh
       - install-rust.sh
 
-  - type: rpm-opt-patch
+  - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
       - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-40/varlad-zellij-fedora-40.repo
