@@ -15,8 +15,6 @@ modules:
     optfix:
       - brave.com
     install:
-      - polkit-kde
-      - kitty
       - fish
       - bat
       - fd-find
@@ -32,9 +30,6 @@ modules:
       - btop
       - neovim
       - fzf
-      - jetbrains-mono-fonts
-      - zathura
-      - mpv
       - brave-browser
     remove:
       - firefox

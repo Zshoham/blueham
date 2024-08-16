@@ -22,10 +22,6 @@ modules:
       - hypridle
       - hyprcursor
       - hyprpaper
-      - aylurs-gtk-shell
-      - qt6-qtsvg
-    remove:
-      - swaylock
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
