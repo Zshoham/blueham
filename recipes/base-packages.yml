@@ -30,6 +30,7 @@ modules:
       - btop
       - neovim
       - fzf
+      - kitty
       - brave-browser
     remove:
       - firefox
