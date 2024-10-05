@@ -13,23 +13,22 @@ modules:
     keys:
       - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     install:
-      - jetbrains-mono-fonts
+      - cargo
+      - rust
       - fish
       - bat
+      - lsd
       - fd-find
-      - jq
-      - yq
       - zoxide
       - ripgrep
       - starship
       - zellij
-      - lsd
-      - age
       - git-delta
       - btop
       - neovim
       - fzf
       - kitty
+      - jetbrains-mono-fonts
       - brave-browser
     optfix:
       - brave.com
