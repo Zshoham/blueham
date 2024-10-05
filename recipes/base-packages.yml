@@ -3,7 +3,6 @@ modules:
     scripts:
       - install-atuin.sh
       - install-yazi.sh
-      - install-rust.sh
 
   - type: rpm-ostree
     repos:

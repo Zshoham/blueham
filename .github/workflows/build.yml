@@ -22,7 +22,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe.yml
+          - recipe-gnome.yml
           - recipe-hyprland.yml
           - recipe-hyprham.yml
           - recipe-gnome-nvidia.yml
