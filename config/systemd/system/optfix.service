@@ -1,9 +1,0 @@
-[Unit]
-Description=Symlink all programs installed to opt from /usr/lib/opt to /opt
-
-[Service]
-Type=oneshot
-ExecStart=/usr/share/ublue-os/optfix-symlink.fish
-
-[Install]
-WantedBy=multi-user.target

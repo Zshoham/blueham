@@ -25,6 +25,7 @@ jobs:
           - recipe.yml
           - recipe-hyprland.yml
           - recipe-hyprham.yml
+          - recipe-gnome-nvidia.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
