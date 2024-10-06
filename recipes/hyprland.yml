@@ -1,0 +1,11 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-41/solopasha-hyprland-fedora-40.repo
+    install:
+      - hyprland
+      - xdg-desktop-portal-hyprland
+      - hyprlock
+      - hypridle
+      - hyprcursor
+      - hyprpaper

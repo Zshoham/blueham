@@ -1,0 +1,16 @@
+modules:
+  - type: rpm-ostree
+    remove:
+      - gnome-terminal
+      - gnome-terminal-nautilus
+      - gnome-tour
+      - gnome-initial-setup
+      - gnome-system-monitor
+      - gnome-software
+      - gnome-software-rpm-ostree
+      - wireguard-tools
+      - solaar-udev
+      - gnome-tweaks
+      - oversteer-udev
+      - openrgb-udev-rules
+

@@ -63,12 +63,8 @@ install:
   - brightnessctl
   - kanshi
 
-# terminal
-  - kitty
-
 # notifications
   - dunst
-
   - waybar
 
 # theme and GUI
