@@ -35,6 +35,7 @@ modules:
       - kitty
       - jetbrains-mono-fonts
       - nerd-fonts-symbols-only
+      - jet-brains-mono-nerd-fonts
       - brave-browser
     optfix:
       - brave.com
