@@ -1,4 +1,6 @@
 type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-40/erikreider-SwayNotificationCenter-fedora-40.repo
 install:
 # launcher
   - rofi-wayland
@@ -64,7 +66,7 @@ install:
   - kanshi
 
 # notifications
-  - dunst
+  - swaync
   - waybar
 
 # theme and GUI
