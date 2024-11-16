@@ -9,6 +9,16 @@ modules:
     disable-init: true
     disable-update: true
 
+  - type: default-flatpaks
+    notify: true
+    install:
+      - flathub md.obsidian.Obsidian
+      - com.valvesoftware.Steam
+      - flathub net.lutris.Lutris
+      - net.davidotek.pupgui2
+      - com.discordapp.Discord
+      - io.ente.auth 
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
@@ -37,9 +47,14 @@ modules:
       - nerd-fonts-symbols-only
       - jet-brains-mono-nerd-fonts
       - brave-browser
+      - syncthing
     optfix:
       - brave.com
     remove:
       - firefox
       - firefox-langpacks
 
+  - type: systemd
+    user:
+      enabled:
+        - syncthing.service

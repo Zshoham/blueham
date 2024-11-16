@@ -7,7 +7,6 @@ modules:
       - gnome-initial-setup
       - gnome-system-monitor
       - gnome-software
-      - gnome-software-rpm-ostree
       - wireguard-tools
       - solaar-udev
       - gnome-tweaks
