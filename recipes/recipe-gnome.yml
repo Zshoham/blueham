@@ -2,7 +2,7 @@ name: blueham-gnome
 description: Gnome image based on silverblue
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40 
+image-version: 41
 
 modules:
   - from-file: common.yml

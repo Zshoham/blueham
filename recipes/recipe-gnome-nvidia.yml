@@ -2,7 +2,7 @@ name: blueham-gnome-nvidia
 description: Gnome image based on silverblue with nvidia drivers
 
 base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: 40
+image-version: 41
 
 modules:
   - from-file: common.yml

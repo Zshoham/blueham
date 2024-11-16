@@ -2,8 +2,7 @@ name: blueham-hyprland-nvidia
 description: Personal Hyprland 
 
 base-image: ghcr.io/ublue-os/base-nvidia
-
-image-version: 40 
+image-version: 41
 
 modules:
   - from-file: common.yml
