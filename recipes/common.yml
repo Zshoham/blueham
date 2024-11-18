@@ -11,13 +11,14 @@ modules:
 
   - type: default-flatpaks
     notify: true
-    install:
-      - md.obsidian.Obsidian
-      - com.valvesoftware.Steam
-      - net.lutris.Lutris
-      - net.davidotek.pupgui2
-      - com.discordapp.Discord
-      - io.ente.auth 
+    user:
+      install:
+        - md.obsidian.Obsidian
+        - com.valvesoftware.Steam
+        - net.lutris.Lutris
+        - net.davidotek.pupgui2
+        - com.discordapp.Discord
+        - io.ente.auth 
 
   - type: rpm-ostree
     repos:
