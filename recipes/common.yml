@@ -54,6 +54,9 @@ modules:
       - firefox-langpacks
 
   - type: systemd
+    system:
+      enabled:
+        - symlink-opt.service
     user:
       enabled:
         - syncthing.service

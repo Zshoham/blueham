@@ -1,0 +1,12 @@
+[Unit]
+Description=Symlink directories from /usr/lib/opt to /var/opt
+After=local-fs.target
+Requires=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c 'for dir in /usr/lib/opt/*; do [ -d "$dir" ] && ln -sfn "$dir" "/var/opt/$(basename "$dir")"; done'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
