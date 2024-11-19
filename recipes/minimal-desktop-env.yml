@@ -1,6 +1,6 @@
 type: rpm-ostree
 repos:
-  - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-40/erikreider-SwayNotificationCenter-fedora-40.repo
+  - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
 install:
 # launcher
   - rofi-wayland
