@@ -6,8 +6,6 @@ modules:
 
   - type: chezmoi
     repository: "https://github.com/Zshoham/dotfiles.git" 
-    disable-init: true
-    disable-update: true
 
   - type: default-flatpaks
     notify: true
